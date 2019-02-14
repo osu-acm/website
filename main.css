@@ -1,0 +1,176 @@
+/* Variables */
+/*OSU theme colors*/
+/* Componenets of the site */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:after, blockquote:before {
+  content: '';
+  content: none; }
+
+q:after, q:before {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 12pt; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.2em; }
+
+h5 {
+  font-size: 1.1em; }
+
+h6 {
+  font-size: 1em; }
+
+/*OSU theme colors*/
+nav {
+  grid-area: nav;
+  background: #c34500;
+  width: 100vw; }
+  nav p, nav a {
+    color: white;
+    font-family: "Gudea", sans-serif;
+    line-height: 50px; }
+  nav p {
+    margin: 0;
+    padding: 0 15px;
+    font-size: 15pt;
+    background: black; }
+  nav a {
+    text-decoration: none;
+    transition: .5s;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14pt; }
+    nav a:hover {
+      transition: .5s;
+      background: #385e86; }
+  nav .links {
+    display: flex; }
+  nav #selectedTab {
+    transition: 0s;
+    background: #373737;
+    cursor: default; }
+  @media screen and (min-width: 680px) {
+    nav {
+      display: flex; } }
+  @media screen and (max-width: 680px) {
+    nav p {
+      text-align: center; }
+    nav .links {
+      justify-content: center; } }
+
+html, body {
+  min-height: 100vh;
+  font-family: "Gudea", sans-serif; }
+
+#banner {
+  background: black; }
+  #banner img {
+    width: 100%; }
+
+.notification {
+  background: #772a00;
+  padding: 10px;
+  text-align: center;
+  color: white; }
+
+@media screen and (max-width: 680px) {
+  .content {
+    margin: 0 10px; } }
+
+@media screen and (min-width: 680px) {
+  .content {
+    margin: 0 3vw; } }
+
+@media screen and (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav    nav" "events about" "events news"; } }
+
+.whoWeAre {
+  grid-area: about;
+  margin: auto;
+  padding: 20px;
+  max-width: 500px; }
+  .whoWeAre h2 {
+    text-align: center; }
+  .whoWeAre p {
+    text-align: justify;
+    line-height: 1.3; }
+
+.news {
+  grid-area: news; }
+  .news h2, .news h3, .news h4, .news h5, .news h6 {
+    text-align: center; }
+  .news .newsElement {
+    padding: 10px;
+    margin: 10px 0; }
+
+.upcomingEvents h2 {
+  text-align: center;
+  padding: 20px 0; }
+
+.upcomingEvents .eventsContainer {
+  grid-area: events; }
+  @media screen and (max-width: 680px) {
+    .upcomingEvents .eventsContainer .event {
+      margin: 10px; } }
+  @media screen and (min-width: 680px) {
+    .upcomingEvents .eventsContainer {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr; } }
+  .upcomingEvents .eventsContainer .event {
+    background: #a7c4c9; }
+    .upcomingEvents .eventsContainer .event .imgContainer {
+      height: 200px;
+      overflow: hidden; }
+      .upcomingEvents .eventsContainer .event .imgContainer img {
+        width: 100%; }
+    .upcomingEvents .eventsContainer .event .eventDescription {
+      padding: 20px; }
+      .upcomingEvents .eventsContainer .event .eventDescription h3 {
+        text-align: center; }
+      .upcomingEvents .eventsContainer .event .eventDescription h3, .upcomingEvents .eventsContainer .event .eventDescription p {
+        padding: 5px 0; }
