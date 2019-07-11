@@ -1,3 +1,3 @@
-#OSU ACM's Website:
+# OSU ACM Website
 
-This folder holds the code for the new website for OSU ACM.
+This folder holds the code for our new website.
