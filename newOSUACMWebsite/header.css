@@ -3,4 +3,40 @@
  *  Date: 8/9/19
  */
 
- 
+ header {
+    background-color: chocolate;
+ }
+
+ div {
+    display: table;
+    width: 100%;
+ }
+
+#site-title {
+    color: white;
+    font-size: 50px;
+ }
+
+#meeting-info {
+    text-align: center;
+ }
+
+ #nav-bar ul {
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+ }
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+ #left {
+    float: left;
+ }
+
+ #right {
+    float: right;
+ }
