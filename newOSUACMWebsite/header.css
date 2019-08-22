@@ -49,7 +49,7 @@
 a {
     display: block;
     text-decoration: none;
-    color: chocolate;
+    color: #d2691e;
 }
 
 #left {
@@ -60,8 +60,8 @@ a {
  }
 
  #left:hover {
-    color: white;
     background-color: chocolate;
+    color: white !important;
  }
 
 #right {
