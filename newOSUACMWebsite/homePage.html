@@ -8,23 +8,74 @@
 
     <head>
     <meta charset="utf-8">
-    <title>OSU ACM></title>
-    <link rel="icon" href="images/logo.png">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    
-    <script>
-    $(function(){
-        $("#header").load("header.html");
-    });
-    </script>
+    <title>OSU ACM</title>
+    <link rel="icon" href="images/logoWithoutBorder.png">
+    <link rel="stylesheet" href="homePage.css">
 
     </head>
 
     <body>
-        <div id="header"></div>
 
-        // ADD CONTENT HERE FOR THE HOME PAGE
+        <header>
+
+            <link rel="stylesheet" href="header.css">
+        
+            <div id="site-title">
+                <img src="images/logoWithoutBorder.png" alt="ACM Logo">
+                <p>OSU ACM</p>
+            </div>
+        
+            <div id="nav-bar">
+                <ul>
+                    <li id="left"><a href="homePage.html">Home</a></li>
+                    <li id="left"><a href="aboutPage.html">About</a></li>
+                    <li id="left"><a href="officersPage.html">Officers</a></li>
+                    <li id="left"><a href="constitutionPage.html">Constitution</a></li>
+                    <li id="left"><a href="resourcesPage.html">Resources</a></li>
+        
+                    <li id="right"><a href="https://osu-acm.slack.com/"><img src="images/slackLogo.png"></a></li>
+                    <li id="right"><a href="https://github.com/osu-acm"><img src="images/GitHubLogo.png"></a></li>
+                    <li id="right"><a href="https://drive.google.com/open?id=1ZygRhTyd3kjghFJF9SP3Z_84lF3qdYWZ"><img src="images/googleDriveLogo.png"></a></li>
+                    <li id="right"><a href="osu-acm-officers@oregonstate.edu"><img src="images/gmailLogo.png"></a></li>
+                </ul>
+            </div>
+            
+            <div id="meeting-info">
+                Meetings: Wednesday, 5 PM - 6 PM in Kelley Engineering Center, Room 1007
+            </div>
+        
+        </header>
+
+        <div id="contents">
+
+            <div id="newToClub">
+
+                <p>Are you new to the club? There's a couple of things you can do to join OSU ACM! Check out <a href="https://docs.google.com/forms/d/e/1FAIpQLSchgmfUiuKWlKTdwB2FvfudLEXQuYHGJSkXbUEH9DWigwg8Tw/viewform?usp=sf_link">this</a> form to join the club!</p>
+
+            </div>
+
+            <div class="events">
+                <div class="event">
+                    <p>Event Title:</p>
+                    <p>Event Description:</p>
+                    <p>Event Time:</p>
+                </div>
+
+                <div class="event">
+                    <p>Event Title:</p>
+                    <p>Event Description:</p>
+                    <p>Event Time:</p>
+                </div>
+
+                <div class="event">
+                        <p>Event Title:</p>
+                        <p>Event Description:</p>
+                        <p>Event Time:</p>
+                </div>
+            </div>
+            <iframe id="calendar" src="https://calendar.google.com/calendar/b/1/embed?height=500&amp;wkst=1&amp;bgcolor=%23d2691e&amp;ctz=America%2FLos_Angeles&amp;src=b3JlZ29uc3RhdGUuZWR1X2xubGJuNGdpNGs0N2UxNW5taDV2bmFia2IwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23795548&amp;showPrint=0&amp;showCalendars=0&amp;showTz=1&amp;showDate=1" width="50%" height="500" frameborder="0" scrolling="no"></iframe>
+
+        </div>
 
     </body>
 
