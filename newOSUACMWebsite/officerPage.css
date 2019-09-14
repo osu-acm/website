@@ -3,4 +3,29 @@
  *  Date: 9/13/19
  */
 
- 
+.content {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    right: 0px;
+    box-sizing: border-box;
+
+    display: grid;
+    width: 100%;
+
+    border: 5px solid black;
+}
+
+.officer {
+    padding-left: 10px;
+    padding-top: 10px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: chocolate;
+}
+
+.imgContainer img{
+    width: 150px;
+    border-radius: 50%;
+}
