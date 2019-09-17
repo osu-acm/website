@@ -55,7 +55,7 @@ a {
 
 #left {
     float: left;
-    padding: 15px 10px;
+    padding: 17.25px 10px;
     border-right: solid 2px black;
     background-color: white;
  }
@@ -74,7 +74,8 @@ a {
 
 #right {
     float: right;
-    padding: 0px 5px;
+    padding-left: 5px;
+    padding-top: 5px;
  }
 
  #right img {
