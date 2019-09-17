@@ -9,23 +9,57 @@
     left: 0px;
     right: 0px;
     box-sizing: border-box;
+    
+    padding-left: 10px;
 
-    display: grid;
+    display: flex;
+    flex-wrap: wrap; 
     width: 100%;
-
-    border: 5px solid black;
 }
 
 .officer {
+    display: flex;
     padding-left: 10px;
     padding-top: 10px;
+
+    width: 500px;
+    height: 250px;
 
     border: 2px solid black;
     border-radius: 10px;
     background-color: chocolate;
 }
 
-.imgContainer img{
+.officer h5 {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+.imgContainer {
+    height: 200px;
+    width: 200px;
+}
+
+.imgContainer img {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
+}
+
+.description {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.description p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.description a {
+    display: inline;
+    float: right;
+    overflow: auto;
 }
