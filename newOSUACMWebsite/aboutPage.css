@@ -4,7 +4,6 @@
  */
 
  #pageTitle {
-    margin-right: 10px;
     margin-top: 10px;
     padding-bottom: 10px;
 
@@ -32,6 +31,8 @@
 
 #contents {
     display: flex;
+    position: relative;
+    top: 200px;
     margin: 5px;
 
     color: black;
@@ -62,5 +63,7 @@
 }
 
 .infoBox a {
+    display: inline;
     color: black;
+    text-decoration: underline;
 }
