@@ -38,6 +38,10 @@
     height: 100%;
     box-sizing: border-box;
 
+    display: flex;
+    flex-wrap: wrap;
+
+
     padding-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
