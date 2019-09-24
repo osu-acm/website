@@ -4,90 +4,91 @@
  */
 
  header {
-    display: block;
-    background-color: chocolate;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    min-width: 625px;
-    box-sizing: border-box;
+   display: block;
+   background-color: chocolate;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   min-width: 625px;
+   box-sizing: border-box;
 
-    padding: 5px 0px 5px 0px;
-    border-bottom: solid 2px black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
- }
+   padding: 5px 0px 5px 0px;
+   border-bottom: solid 2px black;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
 
 #site-title p {
-    color: white;
-    font-size: 50px;
-    
-    position: absolute;
-    top: -25px;
-    left: 125px;
- }
+   color: white;
+   font-size: 50px;
+   
+   position: absolute;
+   top: -25px;
+   left: 125px;
+}
 
- #site-title img {
-    height: 100px;
-    width: 100px;
- }
+#site-title img {
+   height: 100px;
+   width: 100px;
+}
 
 #nav-bar {
-   white-space: nowrap;
-   text-overflow: ellipsis;
-   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
-   border-top: solid 2px black;
-   border-bottom: solid 2px black;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
 }
 
 #nav-bar ul {
-    list-style-type: none;
-    display: inline;
-    background-color: chocolate;
+   list-style-type: none;
+   display: inline;
+   background-color: chocolate;
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    color: initial;
+   display: block;
+   text-decoration: none;
+   color: initial;
 }
 
 #left {
-    float: left;
-    padding: 17.25px 10px;
-    border-right: solid 2px black;
-    background-color: white;
+   float: left;
+   padding: 17.25px 10px;
+   border-right: solid 2px black;
+   background-color: white;
  }
 
- #left:hover {
-    background-color: chocolate;
-    color: white;
- }
 
- /*  Will add this feature in the future
- .active {
-    background-color: chocolate;
-    color: white;
- }
+#left:hover {
+   background-color: chocolate;
+   color: white;
+}
+
+/*  Will add this feature in the future
+.active {
+   background-color: chocolate;
+   color: white;
+}
 */
 
 #right {
-    float: right;
-    padding-left: 5px;
-    padding-top: 5px;
- }
+   float: right;
+   padding-left: 5px;
+   padding-top: 5px;
+}
 
- #right img {
-    height: 40px;
-    width: 40px;
-    border: solid 2px black;
-    border-radius: 10px;
- }
+#right img {
+   height: 40px;
+   width: 40px;
+   border: solid 2px black;
+   border-radius: 10px;
+}
 
- #meeting-info {
-   text-align: center;
-   color: white;
-   padding: 7px 0px 3px 0px;
+#meeting-info {
+  text-align: center;
+  color: white;
+  padding: 7px 0px 3px 0px;
 }
