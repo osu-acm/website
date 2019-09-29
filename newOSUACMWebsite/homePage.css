@@ -23,6 +23,7 @@
 
     border: 2px black solid;
     border-radius: 10px;
+    box-shadow: -5px 5px 5px grey;
     background-color: chocolate;
 }
 
@@ -45,6 +46,7 @@
 
     border: 2px solid black;
     border-radius: 10px;
+    box-shadow: -5px 5px 5px grey;
     background-color: chocolate;
 }
 
@@ -56,4 +58,5 @@
 
 
     border: 2px solid black;
+    box-shadow: -5px 5px 5px grey;
 }
