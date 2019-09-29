@@ -1,0 +1,22 @@
+/*  
+ *  Author: Joseph Noonan
+ *  Date: 9/29/19
+ */
+
+html {
+    background-color: chocolate;
+}
+
+body {
+    margin: 50px;
+}
+
+ #notFound {
+     font-size: 50px;
+     color: white;
+     text-align: center;
+ }
+
+ #acmLogo {
+     text-align: center;
+ }
