@@ -16,7 +16,7 @@ var server = http.createServer(function (req, res) {
             res.end(fs.readFileSync("homePage.html"));
             console.log("===== loaded homePage.html =====");
             break;
-        case "/officersPage.html":
+        case "/officerPage.html":
             res.end(fs.readFileSync("officerPage.html"));
             console.log("===== loaded officerPage.html =====");
             break;
@@ -27,6 +27,10 @@ var server = http.createServer(function (req, res) {
         case "/aboutPage.html":
             res.end(fs.readFileSync("aboutPage.html"));
             console.log("===== loaded aboutPage.html =====");
+            break;
+        case "/404.html":
+            res.end(fs.readFileSync("404.html"));
+            console.log("===== loaded 404.html =====");
             break;
         case "/":
             res.end(fs.readFileSync("homePage.html"));
@@ -53,6 +57,10 @@ var server = http.createServer(function (req, res) {
         case "/aboutPage.css":
             res.end(fs.readFileSync("aboutPage.css"));
             console.log("== loaded aboutPage.css");
+            break;
+        case "/404.css":
+            res.end(fs.readFileSync("404.css"));
+            console.log("===== loaded 404.css =====");
             break;
 
         // IMAGES: -----------------------------------
