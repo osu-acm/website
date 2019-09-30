@@ -32,6 +32,10 @@ var server = http.createServer(function (req, res) {
             res.end(fs.readFileSync("404.html"));
             console.log("===== loaded 404.html =====");
             break;
+        case "/index.html":
+            res.end(fs.readFileSync("index.html"));
+            console.log("===== loaded homePage.html =====");
+            break;
         case "/":
             res.end(fs.readFileSync("homePage.html"));
             console.log("===== loaded homePage.html =====");
