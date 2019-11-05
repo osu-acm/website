@@ -9,8 +9,8 @@ var app = express();
 var port = process.env.PORT || 3500;
 
 app.use(express.static('public'));
-app.use(express.static('images'));
 
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.listen(port, () => 
     console.log("== Server is listening on port", port)
