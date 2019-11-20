@@ -1,4 +1,4 @@
-# OSU ACM Website
+# website
 
 This is the offical repository for OSU ACM's website.
 
