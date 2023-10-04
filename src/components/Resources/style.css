@@ -1,0 +1,114 @@
+.resources__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 6rem;
+  padding-top: 3rem;
+}
+
+.resources__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  /* red */
+  border: 2px solid rgba(295, 20, 1, 0.3);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.resource__card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0px 9px 30px rgba(255, 149, 5, 0.3);
+}
+
+.resources__card__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.resources__card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.resources__subtitle {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.resources__card__text {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.resource__card__text__title {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #fc4405;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.resources__card__link {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.resource__card__text__description {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 1rem;
+  white-space: pre-line;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.resources__card__inner img {
+  margin: 0 auto;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.resource__card__text__tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  postition: relative;
+}
+
+.resource__card__text__tag {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.resource__card__text__tag:hover {
+  background-color: #333;
+  color: #fff;
+}

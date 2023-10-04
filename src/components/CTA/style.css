@@ -1,0 +1,27 @@
+.cta {
+  position: relative;
+  background: var(--osuOrange);
+  padding: 5.6rem 0;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  background-image: url("/images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.cta__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3.2rem;
+  z-index: 999;
+}

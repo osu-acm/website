@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+
+// Components
+import { Footer, Header, ResourcesGrid, ResuableHero } from "../components";
+
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/acmlogo.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Resources - ACM @ OSU</title>
+  </head>
+  <body>
+    <main>
+      <Header client:load />
+      <ResuableHero title="Resources" text="Curated resources brought to you by our team." client:load />
+      <ResourcesGrid client:load />
+      <Footer />
+    </main>
+  </body>
+</html>

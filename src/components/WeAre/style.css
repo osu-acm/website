@@ -1,0 +1,65 @@
+.we-are {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  padding: 2rem 0;
+  /* // height may need to be adjusted */
+  gap: 2rem;
+  background-color: var(--lightosu);
+}
+
+.header-who {
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.text-who {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  color: #ffff;
+  font-size: 2.5rem;
+}
+
+.image-who {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #000;
+  resize: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
