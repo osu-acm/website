@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 5.6rem 0;
+}
+
+.hero__border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 3.8rem 0;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+  height: 55rem;
+}
+
+.hero__image::after {
+  content: "";
+  position: absolute;
+  height: 50rem;
+  width: 70rem;
+  top: -10%;
+  left: 50%;
+  background-image: url("/images/illustration-working.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.resources__image::after {
+  content: "";
+  position: absolute;
+  height: 50rem;
+  width: 70rem;
+  left: 20%;
+  top: -20%;
+  background-image: url("/acm-logo-osu.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.highlight {
+  color: #db4005;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .hero {
+    margin-bottom: 10rem;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 3.2rem;
+    height: 65rem;
+  }
+
+  .hero__text {
+    order: 2;
+    text-align: center;
+  }
+
+  .hero__image {
+    order: 1;
+  }
+
+  .hero__image::after {
+    top: -45%;
+    height: 40rem;
+    width: 60rem;
+    /* left: 15%; */
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .hero {
+    margin-bottom: 12rem;
+  }
+
+  .hero__inner {
+    height: 76rem;
+    transform: translateY(-5%);
+  }
+
+  .hero__image::after {
+    height: 40rem;
+    width: 60rem;
+    left: 40%;
+  }
+
+  .hero__image {
+    scale: 0.8;
+  }
+}

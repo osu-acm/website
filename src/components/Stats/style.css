@@ -1,0 +1,80 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 70vh;
+  gap: 2rem;
+}
+
+.stats__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.text-header {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 100%;
+  padding: 0.1rem;
+  height: 1px;
+  background-color: #db4405;
+}
+
+.page-title {
+  color: #000000;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 36rem;
+  margin: 16px;
+  padding: 20px;
+  background-color: rgb(234 88 12);
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.info-number {
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.info-label {
+  font-size: 2.5rem;
+}
