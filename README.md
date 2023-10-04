@@ -1,47 +1,44 @@
-<h1 align="center">Shortly landing page</h1>
+<h1 align="center">ACM @ OSU Landing Page</h1>
 <div align="center">
   <h3>
-    <a href="https://shortly-fe-mentor.netlify.app" color="white">
-      Live
+    Made by 
+    <a href="https://github.com/nyumat">
+      @Nyumat
     </a>
     <span> | </span>
-    <a href="https://github.com/JaneMoroz/frontend-mentor-landings/tree/main/shortly">
-      Solution
-    </a>
-   <span> | </span>
-    <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G">
-      Challenge
-    </a>
+     <a href="https://astro.build"><img src="https://astro.badg.es/v2/built-with-astro/small.svg" alt="Built with Astro" width="192" height="32" align="center"></a>
   </h3>
 </div>
-<div align="center">
-   Solution for a challenge from  <a href="https://www.frontendmentor.io/" target="_blank">frontendmentor.io</a>.
-</div>
-<br/>
 <br/>
 
-<div align="center"><img src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/erg4fyzl3bu0r4kwcvvq.jpg"></img></div>
+<div align="center"><img src="https://res.cloudinary.com/dkosoobf7/image/upload/v1696379199/pf/acm_site.png"></img></div>
 <br/>
 <br/>
 
 ## 🚀 Technologies used:
 
-<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React icon" height="30" /><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript icon" height="30" /><img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" alt="netlify icon" height="30" />
+<div>
+  <img width="100" height="30" src="https://badges.aleen42.com/src/node.svg">
+  <img width="100" height="30" src="https://badges.aleen42.com/src/react.svg">
+  <img width="130" height="30" src="https://badges.aleen42.com/src/typescript.svg">
+	<img width="100" height="30" src="https://badges.aleen42.com/src/vitejs.svg">
+	<img width="100" height="30" src="https://badges.aleen42.com/src/npm.svg">
+</div>
+
+<ul>
+
+  <li>Astro 🚀 </li>
+</ul>
 
 - [x] Astro 🚀
 - [x] Responsive Design
 - [x] Framer Motion
 
-## 📄 About The Project
+## 📄 Why?
 
-Shortly landing page.
+Our team enjoyed our old site, however, we knew that it was time for change. 
+
+With Astro.js, it brings the best parts of SSG and combines it reactivity and islands architecture, allowing us to utilize TypeScript and Framer-motion to 
+craft wonderful animations, observers, and overall user interface.
 <br/>
-
-## 😀 User Can:
-
-- [x] View the optimal layout for the site depending on their device's screen size
-- [x] Shorten any valid URL
-- [x] See a list of their shortened links, even after refreshing the browser
-- [x] Copy the shortened link to their clipboard in a single click
-- [x] Receive an error message when the form is submitted if url is wrong or empty
 
