@@ -47,12 +47,12 @@ const Header = () => {
           </nav>
           <div className="header__btns">
             <a
-              className="link link--primary"
+              className="btn btn--primary btn--small"
               href="https://apps.ideal-logic.com/osusli"
+              target="_blank"
+              rel="noreferrer"
             >
-              <button className="btn btn--primary" type="button">
-                Join ACM
-              </button>
+              Join ACM
             </a>
           </div>
           <button

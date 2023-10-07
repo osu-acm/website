@@ -6,6 +6,7 @@ import "./style.css";
 
 const OfficerTeam = () => {
   const [windowWidth, setWindowWidth] = useState(0);
+  const [links, setLinks] = useState(officerLinks);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -17,8 +18,6 @@ const OfficerTeam = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const [links, setLinks] = useState(officerLinks);
 
   const sortLinks = () => {
     const president = links.find((officer) => officer.role === "President");
@@ -65,6 +64,7 @@ const OfficerTeam = () => {
           }
           return (
             <ProfileCard
+              key={officer.name}
               name={officer.name}
               role={officer.role}
               image={officer.image}
@@ -104,9 +104,7 @@ export const ProfileCard = (props: any) => {
         className="officer_card"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{
-          transform: props.role === "President" ? "translateY(-30px)" : "",
-        }}
+        onClick={props.onClick}
       >
         <img
           className="officer_image"
