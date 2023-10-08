@@ -42,5 +42,4 @@ export const TagFilter: React.FC<TagFilterProps> = ({
   );
 };
 
-
 export default ResourcesGrid;

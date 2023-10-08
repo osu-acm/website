@@ -39,4 +39,3 @@ Our team enjoyed our old site, however, we knew that it was time for change.
 With Astro.js, it brings the best parts of SSG and combines it reactivity and islands architecture, allowing us to utilize TypeScript and Framer-motion to 
 craft wonderful animations, observers, and overall user interface.
 <br/>
-
