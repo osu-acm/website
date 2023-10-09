@@ -172,6 +172,10 @@ h4 {
   scale: 1.5;
 }
 
+.btn--big:hover {
+  filter: brightness(1.1);
+}
+
 .link--secondary,
 .link--secondary svg path {
   color: var(--grayishViolet);
@@ -190,6 +194,10 @@ h4 {
 .btn--medium {
   color: var(--white);
   font-size: 1.8rem;
+}
+
+.btn:hover {
+  scale: 0.95;
 }
 
 .btn--big {

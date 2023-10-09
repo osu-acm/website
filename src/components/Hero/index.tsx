@@ -20,10 +20,8 @@ const Hero = () => {
               <span className="highlight"> premier </span>
               computer science community.
             </p>
-            <a href="https://apps.ideal-logic.com/osusli">
-              <button className="btn btn--primary btn--big" type="button">
-                Join ACM
-              </button>
+            <a href="https://apps.ideal-logic.com/osusli" target="_blank" rel="noreferrer" className="btn btn--primary btn--big">
+              Join ACM
             </a>
           </motion.div>
           <motion.div

@@ -15,7 +15,7 @@
 <br/>
 <br/>
 
-## 🚀 Technologies used:
+## 🚀 Technologies and Features:
 
 <div>
   <img width="100" height="30" src="https://badges.aleen42.com/src/node.svg">
@@ -25,14 +25,12 @@
 	<img width="100" height="30" src="https://badges.aleen42.com/src/npm.svg">
 </div>
 
-<ul>
-
-  <li>Astro 🚀 </li>
-</ul>
-
 - [x] Astro 🚀
 - [x] Responsive Design
 - [x] Framer Motion
+- [x] TypeScript
+- [x] React
+- [x] Vite
 
 ## 📄 Why?
 
@@ -41,4 +39,3 @@ Our team enjoyed our old site, however, we knew that it was time for change.
 With Astro.js, it brings the best parts of SSG and combines it reactivity and islands architecture, allowing us to utilize TypeScript and Framer-motion to 
 craft wonderful animations, observers, and overall user interface.
 <br/>
-

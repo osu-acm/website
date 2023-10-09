@@ -112,3 +112,90 @@
   background-color: #333;
   color: #fff;
 }
+
+.resources__card {
+  position: relative;
+}
+
+.resources__card:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+  transition: opacity 0.5s ease-in-out;
+  background: linear-gradient(
+    to top,
+    rgb(220, 68, 5, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.resources__card:hover:after {
+  opacity: 1;
+}
+
+.tag-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.tag {
+  margin-top: 16px;
+  cursor: pointer;
+  padding: 6px 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #ffff;
+  border: 1px solid #333;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tag.selected {
+  background-color: rgba(290, 68, 5, 0.5);
+  color: #fff;
+}
+
+.tag:hover {
+  background-color: rgba(290, 68, 5, 0.5);
+  color: #fff;
+}
+
+.tag.selected:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.resources__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid rgba(295, 20, 1, 0.3);
+  border-radius: 5px;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.resources__button:hover {
+  background-color: rgba(290, 68, 5, 0.5);
+  color: #fff;
+}
+
+.loadmore__button {
+  font-size: 2rem;
+  font-weight: semi-bold;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
