@@ -7,6 +7,14 @@
   padding: 2rem 0;
   height: 40rem;
   gap: 2rem;
+  height: 100%;
+}
+
+.text-white {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .events__inner {
@@ -23,4 +31,42 @@
   margin: 0.5rem 0.1rem;
   height: 1px;
   background-color: #db4405;
+}
+
+.event {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.event-date {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.event-info {
+  margin-top: 10px;
+  line-height: 1.5em;
+}
+
+.event-info-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+.event-info-time,
+.event-info-location,
+.event-info-description {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px 0;
+}
+
+.event-info-location {
+  text-decoration: underline;
 }
