@@ -17,6 +17,7 @@
     "@types/react-dom": "^18.0.9",
     "astro": "^3.2.2",
     "framer-motion": "^7.10.3",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.8"
