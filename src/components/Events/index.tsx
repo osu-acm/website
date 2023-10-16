@@ -1,4 +1,3 @@
-// Styles
 import currentEvents from "./data";
 import "./style.css";
 
