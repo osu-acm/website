@@ -33,6 +33,8 @@
   padding: 0rem 3.2rem 4rem 3.2rem;
   background: var(--white);
   border-radius: 1rem;
+  box-shadow: 0 2.4rem 4rem rgba(0, 0, 0, 0.1);
+  position: relative;
   z-index: 999;
 }
 
