@@ -1,4 +1,5 @@
 // Styles
+import currentEvents from "./data";
 import "./style.css";
 
 interface EventProps {
@@ -24,17 +25,7 @@ function Event({ date, time, location, title, description }: EventProps) {
 }
 
 const Events = ({ haveEvents }: { haveEvents: boolean }) => {
-  const events = [
-    {
-      date: "Thursday, October 12, 2023",
-      time: "6:00 PM - 7:00 PM",
-      location: "Kelley Engineering Center Room 1003 & Discord",
-      title: "Introduction To Competitive Programming w/ Otso and Nick",
-      description:
-        "For this Thursday’s meeting, we will be getting everyone up to speed on competitive programming! This is completely beginner friendly, no experience is required!",
-    },
-  ];
-
+  const events = currentEvents;
   return (
     <section className="events">
       <div className="container">
