@@ -101,7 +101,7 @@ h4 {
 }
 
 .paragraph {
-  fontweight: 500;
+  font-weight: 500;
 }
 
 .paragraph--big {
@@ -180,7 +180,7 @@ h4 {
 .link--secondary svg path {
   color: var(--grayishViolet);
   fill: var(--white);
-  fontweight: 500;
+  font-weight: 500;
   white-space: nowrap;
 }
 
