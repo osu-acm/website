@@ -17,6 +17,14 @@ const events = [
             title: "TBA",
             description:
                   "TBA",
+      },
+      {
+            date: "Thursday, November 2nd, 2023",
+            time: "6:00 PM - 7:00 PM",
+            location: "Kelley Engineering Center Room 1003 & Discord",
+            title: "How to get a job @ the Big 4 (Google, Meta, Amazon, Microsoft) by Tom",
+            description:
+                  "Join us for an insightful talk by Tom Nyuma on how to get a job at the worlds biggest tech companies!",
       }
 ];
 
