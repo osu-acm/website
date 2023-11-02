@@ -42,7 +42,7 @@
 
 .form__input-group input::placeholder {
   font-size: 2rem;
-  fontweight: 500;
+  font-weight: 500;
   color: var(--grayishViolet);
 }
 
@@ -91,7 +91,7 @@
 .original-link,
 .short-link {
   font-size: 2rem;
-  fontweight: 500;
+  font-weight: 500;
 }
 
 .original-link {

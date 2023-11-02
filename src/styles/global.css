@@ -38,7 +38,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
-  fontweight: 400;
+  font-weight: 400;
 }
 main {
   position: relative;
@@ -69,7 +69,7 @@ h1,
 h2,
 h3 {
   color: var(--veryDarkViolet);
-  fontweight: 700;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -101,7 +101,7 @@ h4 {
 }
 
 .paragraph {
-  fontweight: 500;
+  font-weight: 500;
 }
 
 .paragraph--big {
@@ -156,7 +156,7 @@ h4 {
 .link,
 .btn {
   font-size: 1.5rem;
-  fontweight: 700;
+  font-weight: 700;
   transition: all 0.3s;
 }
 
@@ -180,7 +180,7 @@ h4 {
 .link--secondary svg path {
   color: var(--grayishViolet);
   fill: var(--white);
-  fontweight: 500;
+  font-weight: 500;
   white-space: nowrap;
 }
 
