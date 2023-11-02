@@ -36,6 +36,7 @@
   box-shadow: 0 2.4rem 4rem rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 999;
+  border: 1px solid Darkorange;
 }
 
 .feature-list__item:nth-child(2) {
