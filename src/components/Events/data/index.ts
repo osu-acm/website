@@ -25,7 +25,14 @@ const events = [
             title: "How to get a job @ the Big 4 (Google, Meta, Amazon, Microsoft) by Tom",
             description:
                   "Join us for an insightful talk by Tom Nyuma on how to get a job at the worlds biggest tech companies!",
-      }
+      },
+      {
+            date: "Thursday, November 9th, 2023",
+            time: "6:00PM - 7:00PM",
+            location: "Kelley Engineering Center Room 1003 & Discord",
+            title: "Competitive Programming Practice",
+            description: "Join us to prepare for the competition this weekend!"
+      }  
 ];
 
 const currentEvents = events.filter((event) => {
