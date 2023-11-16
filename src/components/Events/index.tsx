@@ -23,7 +23,7 @@ function Event({ date, time, location, title, description }: EventProps) {
   );
 }
 
-const Events = ({ haveEvents }: { haveEvents: boolean }) => {
+const Events = () => {
   const events = currentEvents;
   return (
     <section className="events">
@@ -41,13 +41,13 @@ const Events = ({ haveEvents }: { haveEvents: boolean }) => {
               alignItems: "center",
             }}
           >
-            {!haveEvents && (
+            {!(currentEvents.length > 0) && (
               <div className="no-events">
                 <p className="no-events-text">None right now but stay tuned!</p>
               </div>
             )}
 
-            {haveEvents && (
+            {currentEvents && (
               <div className="events-list">
                 {events.map((event, index) => (
                   <Event
