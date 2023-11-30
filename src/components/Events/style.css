@@ -70,3 +70,14 @@
 .event-info-location {
   text-decoration: underline;
 }
+
+.event-info-zoom {
+  color: #dc4405;
+  margin: 5px 0;
+}
+
+.event-info-zoom:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bolder;
+}

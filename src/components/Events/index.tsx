@@ -7,16 +7,44 @@ interface EventProps {
   location: string;
   title: string;
   description: string;
+  zoomLink?: string;
+  pin?: string;
 }
 
-function Event({ date, time, location, title, description }: EventProps) {
+function Event({
+  date,
+  time,
+  location,
+  title,
+  description,
+  zoomLink,
+  pin,
+}: EventProps) {
+  const isZoomEvent = location.toLowerCase().includes("zoom");
+  console.log(isZoomEvent);
+  console.log(zoomLink);
   return (
     <div className="event">
       <span className="event-date">{date}</span>
       <div className="event-info">
         <h3 className="event-info-title">{title}</h3>
         <p className="event-info-time">{time}</p>
-        <p className="event-info-location">{location}</p>
+        <span className="event-info-location">
+          {location.replace("Zoom", "")}
+          {isZoomEvent ? (
+            <a
+              href={zoomLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="event-info-zoom"
+            >
+              Zoom
+            </a>
+          ) : (
+            location
+          )}
+          {isZoomEvent && pin && <span> (Pin: {pin})</span>}
+        </span>
         <p className="event-info-description">{description}</p>
       </div>
     </div>
@@ -57,6 +85,8 @@ const Events = () => {
                     location={event.location}
                     title={event.title}
                     description={event.description}
+                    zoomLink={event.zoomLink}
+                    pin={event.pin}
                   />
                 ))}
               </div>
