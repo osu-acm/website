@@ -22,7 +22,9 @@ export interface Event {
       time: string;
       location: string;
       title: string;
-      description: string;
+    description: string;
+    zoomLink?: string;
+    pin?: string;
 }
 
 
