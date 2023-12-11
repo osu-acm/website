@@ -50,7 +50,7 @@ const compProResources: CompetitveProgrammingResource[] = [
             tags: ["Algorithms", "Intuition"],
       },
       {
-            title: "Competitve Programmer's Handbook",
+            title: "Competitive Programmer's Handbook",
             text: "A handbook of data structures and algorithms for competitive programmers.",
             link: "https://cses.fi/book/book.pdf",
             tags: ["Textbook", "Algorithms", "Intuition"],
@@ -150,6 +150,11 @@ const eecsOsuResources: OsuResource[] = [
             title: "MyEECS",
             text: "Tools, services, and resources specific to the School of Electrical Engineering and Computer Science",
             link: "https://engineering.oregonstate.edu/EECS/MyEECS"
+      },
+      {
+            title: "ENGR+ Course Load Guide",
+            text: "Course load guidance for incoming OSU first-year CS majors.",
+            link: "https://chrisho.dev/blog/engr-plus.html"
       }
 ];
 
