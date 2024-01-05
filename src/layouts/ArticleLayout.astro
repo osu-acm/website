@@ -1,0 +1,229 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <div class="article-header">
+    <p class="article-date">{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p class="article-author">By: {frontmatter.author}</p>
+    <img
+      class="article-image"
+      src={frontmatter.image.url}
+      alt={frontmatter.image.alt}
+    />
+    <p class="article-description"><em>{frontmatter.description}</em></p>
+  </div>
+
+  <div class="article-content">
+    <slot />
+  </div>
+
+  <div class="tag-container">
+    <h3 class="tag-title">Tags For This Post</h3>
+    <div class="tags">
+      {
+        frontmatter.tags.map((tag: string) => (
+          <span class="tag btn btn--primary btn--small">
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
+<style>
+  /* Article Header Stuff... */
+  .article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .article-image {
+    width: 100%;
+    max-width: 100dvw;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .article-description {
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center;
+  }
+
+  .article-date {
+    font-size: 1.1em;
+    color: #db4405;
+  }
+
+  .article-author {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* Tag Stuff... */
+
+  .tag-container {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: -1em;
+    align-items: flex-start;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+  }
+
+  .tag {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .tag-title {
+    margin-bottom: 0.5em;
+  }
+
+  .tag a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .tag a:hover {
+    text-decoration: underline;
+  }
+
+  .tag.btn {
+    background-color: #000;
+    border: 1px solid #000;
+  }
+
+  .article-content {
+    /* God Bless This Shorthand */
+    all: initial;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family:
+      "Inter",
+      sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji";
+
+    p {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.1em;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 2.2em;
+    }
+
+    h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h5 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-left: 20px;
+    }
+
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li li {
+      margin-left: 20px;
+    }
+
+    a {
+      color: #db4405;
+      text-decoration: underline;
+    }
+
+    blockquote {
+      border-left: 2px solid #ccc;
+      padding-left: 10px;
+      color: #666;
+      margin: 20px 0;
+    }
+
+    blockquote blockquote {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 20px;
+      border-left-color: #999;
+    }
+
+    code {
+      font-family: "Courier New", monospace;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+
+    pre {
+      padding: 10px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    pre code {
+      display: block;
+      padding: 10px;
+      overflow-x: auto;
+      margin: 0;
+      border-radius: 10px;
+    }
+
+    img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+</style>
