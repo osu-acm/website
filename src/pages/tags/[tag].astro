@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import BlogPost from "../../components/Blog/BlogPost.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout>
+  <h2>Posts Tagged With: <span class="inline-tag btn--primary">{tag}</span></h2>
+  <div class="divider"></div>
+  {
+    posts.map((post) => (
+      <BlogPost
+        url={`/posts/${post.slug}/`}
+        title={post.data.title}
+        description={post.data.description}
+        tags={post.data.tags}
+        image={post.data.image}
+        author={post.data.author}
+        pubDate={post.data.pubDate}
+      />
+    ))
+  }
+</BaseLayout>
+
+<style>
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+
+  .inline-tag {
+    padding: 0.4rem 0.77rem 0.4rem 0.77rem;
+    margin-left: 0.5rem;
+  }
+</style>

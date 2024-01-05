@@ -1,30 +1,166 @@
 ---
-import "../styles/global.css";
-
-// Components
+import { getCollection } from "astro:content";
+import moment from "moment";
+import BlogPost from "../components/Blog/BlogPost.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const allPosts = await getCollection("posts");
+const pageTitle = "The ACM Blog";
+const recentPosts = allPosts
+  .sort((a, b) => {
+    const aDate = moment(a.data.pubDate);
+    const bDate = moment(b.data.pubDate);
+    return Number(bDate) - Number(aDate);
+  })
+  .slice(0, 3);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/svg+xml" href="/acmlogo.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Blog - ACM @ OSU</title>
-  </head>
-  <body>
-    <main>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh" }}>
-        <h2 style={{ textAlign: "center" }}>Our Blog is Coming Soon!</h2>
-        <a href="/" style={{ textDecoration: "none", color: "#fc4405", marginTop: "1rem" }}>Go Back</a>
-        </div>
-    </main>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="content-wrap">
+    <div class="left-column">
+      <h3 id="info">
+        Welcome to the official blog of our ACM Chapter! <br /><br /> Here, you can
+        find articles about a variety of topics. From guides, to tutorials, to our
+        meeting recaps.
+      </h3>
+      <br />
+      <h3>
+        Are you interested in writing a blog post?
+        <a href="https://gist.github.com/Nyumat/8f07bd3ba1fb482c71c2a729134d5487">
+          Read these instructions!
+        </a>
+      </h3>
+    </div>
+    <div class="right-column">
+      <img
+        class="logo"
+        src="acmlogo.svg"
+        alt="OSU ACM Logo"
+        width="400"
+        height="200"
+      />
+    </div>
+  </div>
+  <div class="recents">
+    <h3 id="featured">Featured Posts</h3>
+    <ul>
+      {
+        recentPosts.map((post) => (
+          <BlogPost
+            url={`/posts/${post.slug}/`}
+            title={post.data.title}
+            description={post.data.description}
+            tags={post.data.tags}
+            image={post.data.image}
+            author={post.data.author}
+            pubDate={post.data.pubDate}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    max-width: 100dvw;
+  }
+  .left-column {
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .right-column {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transform: translateY(-5.5rem);
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    color: #db4405;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .title a {
+    color: #db4405;
+    text-decoration: none;
+  }
+
+  .title a:hover,
+  .title a:focus,
+  .title a:active {
+    text-decoration: underline;
+  }
+
+  #featured {
+    margin-top: 2rem;
+    font-size: 5rem;
+    font-weight: 600;
+  }
+
+  #info {
+    max-width: 45dvw;
+  }
+
+  @media (max-width: 768px) {
+    .content-wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right-column {
+      transform: translateY(0);
+    }
+
+    .left-column {
+      margin-right: 0;
+    }
+
+    #info {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .right-column {
+      display: none;
+    }
+
+    #info {
+      max-width: 100%;
+    }
+
+    .left-column h3 {
+      font-size: 2.2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .right-column {
+      display: none;
+    }
+
+    .left-column h3 {
+      font-size: 2.2rem;
+    }
+  }
+</style>
