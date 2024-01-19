@@ -1,6 +1,6 @@
-import { type CompetitveProgrammingResource, type OsuResource, type WebDevelopmentResource } from "../../types";
+import type { CompetitiveProgrammingResource, OsuResource, WebDevelopmentResource } from "../../types";
 
-const compProResources: CompetitveProgrammingResource[] = [
+const compProResources: CompetitiveProgrammingResource[] = [
       {
             title: "Leetcode",
             text: "Platform for practicing technical interview questions.",
@@ -158,10 +158,10 @@ const eecsOsuResources: OsuResource[] = [
       }
 ];
 
-const resouceMap = {
+const resourceMap = {
       compPro: compProResources,
       webDev: webDevResources,
       eecsOsu: eecsOsuResources,
 };
 
-export default resouceMap;
+export default resourceMap;

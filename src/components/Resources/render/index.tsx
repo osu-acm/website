@@ -2,20 +2,16 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useState } from "react";
 import { TagFilter } from "..";
 import {
-  type CompetitveProgrammingResource,
+  type CompetitiveProgrammingResource,
   type OsuResource,
   type WebDevelopmentResource,
 } from "../../../types";
-
-interface OsuEecsResourcesProps {
-  resources: OsuResource[];
-  handleCardClick: (link: string) => void;
-}
+import type { ResourcesProps } from "../types.ts";
 
 export const OsuEecsResources = ({
   resources,
   handleCardClick,
-}: OsuEecsResourcesProps) => {
+}: ResourcesProps<OsuResource[]>) => {
   const [parent] = useAutoAnimate();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const handleTagClick = (tag: string | null) => {
@@ -81,12 +77,7 @@ export const OsuEecsResources = ({
   );
 };
 
-interface ComProps {
-  resources: CompetitveProgrammingResource[];
-  handleCardClick: (link: string) => void;
-}
-
-export const CompProResources = ({ resources, handleCardClick }: ComProps) => {
+export const CompProResources = ({ resources, handleCardClick }: ResourcesProps<CompetitiveProgrammingResource[]>) => {
   const [parent] = useAutoAnimate();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const handleTagClick = (tag: string | null) => {
@@ -118,7 +109,7 @@ export const CompProResources = ({ resources, handleCardClick }: ComProps) => {
               (resource.tags && resource.tags.includes(selectedTag))
           )
           .slice(0, displayLimit)
-          .map((resource: CompetitveProgrammingResource, index) => (
+          .map((resource: CompetitiveProgrammingResource, index) => (
             <div
               className="resources__card"
               key={index}
@@ -158,15 +149,10 @@ export const CompProResources = ({ resources, handleCardClick }: ComProps) => {
   );
 };
 
-interface WebDevProps {
-  resources: WebDevelopmentResource[];
-  handleCardClick: (link: string) => void;
-}
-
 export const WebDevResources = ({
   resources,
   handleCardClick,
-}: WebDevProps) => {
+}: ResourcesProps<WebDevelopmentResource[]>) => {
   const [parent] = useAutoAnimate();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const handleTagClick = (tag: string | null) => {

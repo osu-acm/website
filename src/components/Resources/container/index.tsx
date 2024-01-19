@@ -1,20 +1,8 @@
-import { useCallback, useState } from "react";
-import type {
-  CompetitveProgrammingResource,
-  OsuResource,
-  WebDevelopmentResource,
-} from "../../../types";
+import { useCallback } from "react";
 import { CompProResources, OsuEecsResources, WebDevResources } from "../render";
+import type { ResourceMap } from "../types.ts";
 
-interface ResourcesProps {
-  resources: {
-    compPro: CompetitveProgrammingResource[];
-    webDev: WebDevelopmentResource[];
-    eecsOsu: OsuResource[];
-  };
-}
-
-export default function ResourcesContainer({ resources }: ResourcesProps) {
+export default function ResourcesContainer({ resources }: { resources: ResourceMap }) {
   const handleCardClick = useCallback((link: string) => {
     window.open(link, "_blank");
   }, []);
