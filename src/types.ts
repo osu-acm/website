@@ -5,7 +5,7 @@ export interface Resource {
       tags?: string[];
 }
 
-export interface CompetitveProgrammingResource extends Resource {
+export interface CompetitiveProgrammingResource extends Resource {
       difficulty?: string;
 }
 

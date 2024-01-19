@@ -1,11 +1,11 @@
 import ResourcesContainer from "./container";
-import resouceMap from "./data";
+import resourceMap from "./data";
 import "./style.css";
 
 const ResourcesGrid = () => {
   return (
     <section className="resources">
-      <ResourcesContainer resources={resouceMap} />
+      <ResourcesContainer resources={resourceMap} />
     </section>
   );
 };
